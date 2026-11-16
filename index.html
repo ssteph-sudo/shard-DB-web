@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -151,9 +152,21 @@
       margin-top: 24px;
     }
 
-    .coming-soon {
-      color: var(--muted);
-      font-style: italic;
+    .video-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 10px;
+      background: #111;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     footer {
@@ -183,6 +196,8 @@
 <body>
   <main>
 
+    <!-- Page Header -->
+
     <div class="conference">SC26 Research Poster</div>
 
     <h1>SHARD-DB</h1>
@@ -191,13 +206,20 @@
       Scalable Hash-Based Retrieval for High-Throughput
       Reference Database Construction
     </p>
+
     <p>
-  <strong>Authors:</strong> Stephanie Murray (CS PhD student) and Dr Lenore Pipes (Principal Investigator)<br>
-  <strong>Affiliation:</strong> University of Hawaiʻi at Mānoa,
-  Pacific Biosciences Research Center
-</p>
+      <strong>Authors:</strong>
+      Stephanie Murray (CS PhD student) and
+      Dr. Lenore Pipes (Principal Investigator)
+      <br>
+      <strong>Affiliation:</strong>
+      University of Hawaiʻi at Mānoa,
+      Pacific Biosciences Research Center
+    </p>
 
     <div class="accent"></div>
+
+    <!-- About and Researcher -->
 
     <div class="grid">
 
@@ -205,106 +227,148 @@
         <h2>About SHARD-DB</h2>
 
         <p>
-          SHARD-DB explores a different strategy for marker-specific
-          reference-database construction: broad MinHash/LSH candidate
-          retrieval followed by targeted locus localization rather than
+          SHARD-DB explores a different strategy for
+          marker-specific reference-database construction:
+          broad MinHash/LSH candidate retrieval followed
+          by targeted locus localization rather than
           alignment-first expansion.
         </p>
 
         <p>
-          The project investigates scalable sequence retrieval across large
-          nucleotide collections, with particular emphasis on memory
-          efficiency, data movement, candidate localization, and
-          workload-dependent performance across marker families.
+          The project investigates scalable sequence
+          retrieval across large nucleotide collections,
+          with particular emphasis on memory efficiency,
+          data movement, candidate localization, and
+          workload-dependent performance across marker
+          families.
         </p>
 
         <div class="research-note">
           <strong>Research status:</strong>
-          SHARD-DB is active, unpublished research. Source code is not
-          currently publicly available.
+          SHARD-DB is active, unpublished research.
+          Source code is not currently publicly available.
         </div>
       </section>
 
       <aside class="card">
         <h2>Researcher</h2>
 
-        <span class="person-name">Stephanie Murray</span>
+        <span class="person-name">
+          Stephanie Murray
+        </span>
 
-<div class="button-row">
+        <p class="contact">
+          PhD Student, Computer Science
+          <br>
+          University of Hawaiʻi at Mānoa
+        </p>
 
-  <a
+        <div class="button-row">
 
-    class="button primary"
+          <a
+            class="button primary"
+            href="mailto:stephanie.murray@hawaii.edu"
+          >
+            Email Stephanie
+          </a>
 
-    href="mailto:stephanie.murray@hawaii.edu"
+          <a
+            class="button"
+            href="https://stephaniemurray.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Website / Research Portfolio
+          </a>
 
-  >
+        </div>
+      </aside>
 
-    Email Stephanie
+    </div>
 
-  </a>
-
-  <a
-
-    class="button"
-
-    href="https://stephaniemurray.org"
-
-    target="_blank"
-
-    rel="noopener noreferrer"
-
-  >
-
-    Website/Research Portfolio
-
-  </a>
-
-</div>
-
-
+    <!-- SC26 Poster -->
 
     <section class="card poster-card">
-      <h2>SC26 Poster</h2>
+      <h2>SC26 Research Poster</h2>
 
       <p>
         <strong>
-          SHARD-DB: Scalable Hash-Based Retrieval for High-Throughput
-          Reference Database Construction
+          SHARD-DB: Scalable Hash-Based Retrieval
+          for High-Throughput Reference Database
+          Construction
         </strong>
       </p>
 
-     <p>
-  View or download the SHARD-DB research poster presented at
-  SC26 in Chicago, November 2026.
-</p>
+      <p>
+        View or download the SHARD-DB research
+        poster presented at SC26 in Chicago,
+        November 2026.
+      </p>
 
+      <div class="button-row">
 
+        <a
+          class="button primary"
+          href="SC26_MurrayS_final_smaller.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Poster
+        </a>
 
+        <a
+          class="button"
+          href="SC26_MurrayS_final_smaller.pdf"
+          download="SHARD-DB_SC26_Poster.pdf"
+        >
+          Download PDF
+        </a>
 
-<div class="button-row">
-  <a
-    class="button primary"
-    href="SC26_MurrayS_final_smaller.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    View Poster
-  </a>
+      </div>
+    </section>
 
-  <a
-    class="button"
-    href="SC26_MurrayS_final_smaller.pdf"
-    download="SHARD-DB_SC26_Poster.pdf"
-  >
-    Download PDF
-  </a>
-</div>
+    <!-- Research Presentation -->
+
+    <section class="card poster-card">
+      <h2>Research Presentation</h2>
+
+      <p>
+        A recorded presentation introducing my
+        research projects, including SHARD-DB
+        and related work in computational biology,
+        algorithm development, and high-performance
+        computing.
+      </p>
+
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/mXzAYgiFVj0"
+          title="Stephanie Murray - Research Presentation"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="button-row">
+        <a
+          class="button"
+          href="https://www.youtube.com/watch?v=mXzAYgiFVj0"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Watch on YouTube
+        </a>
+      </div>
 
     </section>
 
+    <!-- Footer -->
+
     <footer>
-      SHARD-DB · Stephanie Murray · University of Hawaiʻi at Mānoa ·
+      SHARD-DB · Stephanie Murray ·
+      University of Hawaiʻi at Mānoa ·
       Pipes Lab / Pacific Biosciences Research Center
     </footer>
 
